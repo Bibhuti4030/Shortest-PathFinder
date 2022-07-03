@@ -23,10 +23,6 @@ public class loginPage {
 	private JFrame frame;
 	private JTextField txtName;
 	private JPasswordField passwordField;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,17 +35,9 @@ public class loginPage {
 			}
 		});
 	}
-
-	/**
-	 * Create the application.
-	 */
 	public loginPage() {
 		initialize();
 	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		
 		frame = new JFrame();
@@ -90,7 +78,7 @@ public class loginPage {
 		frame.getContentPane().add(idPanel);
 		idPanel.setLayout(null);
 		
-		JLabel askID = new JLabel("Enter Username");
+		JLabel askID = new JLabel("User");
 		askID.setBounds(32, 13, 94, 16);
 		askID.setForeground(new Color(211, 211, 211));
 		askID.setFont(new Font("Gill Sans MT", Font.PLAIN, 15));
@@ -111,7 +99,7 @@ public class loginPage {
 		frame.getContentPane().add(passPanel);
 		passPanel.setLayout(null);
 		
-		JLabel askPass = new JLabel("Enter Password");
+		JLabel askPass = new JLabel("Password");
 		askPass.setForeground(new Color(211, 211, 211));
 		askPass.setFont(new Font("Gill Sans MT", Font.PLAIN, 15));
 		askPass.setBounds(32, 13, 94, 16);
@@ -124,11 +112,11 @@ public class loginPage {
 		passwordField.setBounds(32, 29, 158, 22);
 		passPanel.add(passwordField);
 		
-		JLabel welcome = new JLabel("   Welcome");
-		welcome.setFont(new Font("Bell MT", Font.PLAIN, 45));
-		welcome.setForeground(new Color(0, 206, 209));
-		welcome.setBounds(472, 203, 383, 56);
-		frame.getContentPane().add(welcome);
+		JLabel hosGeldinLabel = new JLabel("HOS GELDINIZ 4300");
+		hosGeldinLabel.setFont(new Font("Bell MT", Font.PLAIN, 45));
+		hosGeldinLabel.setForeground(new Color(0, 206, 209));
+		hosGeldinLabel.setBounds(472, 203, 383, 56);
+		frame.getContentPane().add(hosGeldinLabel);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBackground(new Color(0, 0, 128));
@@ -141,8 +129,8 @@ public class loginPage {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel girisLabel = new JLabel("        Login   ");
-		girisLabel.addMouseListener(new MouseAdapter() {
+		JLabel loginlable = new JLabel("     Login\u015F Do");
+		loginlable.addMouseListener(new MouseAdapter() {
 			@SuppressWarnings({ "deprecation", "static-access" })
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -158,18 +146,18 @@ public class loginPage {
 				}
 				else if (txtName.getText().equals("") || passwordField.getText().equals("")) {
 					JOptionPane sc = new JOptionPane();
-					sc.showMessageDialog(frame, "Username and Password empty","Warning",JOptionPane.ERROR_MESSAGE);
+					sc.showMessageDialog(frame, "Username and Password Field is empty","Warning",JOptionPane.ERROR_MESSAGE);
 				}
 				else {	
 					JOptionPane sc = new JOptionPane();
-					sc.showMessageDialog(frame, "Password is not correct","Warning",JOptionPane.ERROR_MESSAGE);
+					sc.showMessageDialog(frame, "Username and Password not match","Warning",JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
-		girisLabel.setForeground(new Color(255, 255, 255));
-		girisLabel.setFont(new Font("Gill Sans MT", Font.PLAIN, 30));
-		girisLabel.setBounds(0, 0, 189, 49);
-		panel.add(girisLabel);
+		loginlable.setForeground(new Color(255, 255, 255));
+		loginlable.setFont(new Font("Gill Sans MT", Font.PLAIN, 30));
+		loginlable.setBounds(0, 0, 189, 49);
+		panel.add(loginlable);
 		
 		JLabel logoLabel = new JLabel("New label");
 		logoLabel.setIcon(new ImageIcon(loginPage.class.getResource("/images/logo.png")));
