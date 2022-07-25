@@ -33,7 +33,7 @@ public class deliveryMap extends JFrame {
 					
 					distanceMatrices matrix = new distanceMatrices();
 					 String gidilencity="Kocaeli : ";
-					 String toPrinted= " GÝTMEK ÝÇÝN => Kocaeli ";
+					 String toPrinted= " GÃTMEK ÃÃ‡ÃN => Kocaeli ";
 					 
 					public static dijkstra calculate = new dijkstra ();
 					
@@ -65,7 +65,7 @@ public class deliveryMap extends JFrame {
         	targets+="-"+sc.getcities()[i];
         }
 		
-		// KAPATMA TUÞU 
+ 
 		JLabel closeIcon = new JLabel("New label");
 		closeIcon.setBounds(1636, 0, 64, 64);
 		closeIcon.addMouseListener(new MouseAdapter() {
@@ -168,7 +168,7 @@ public class deliveryMap extends JFrame {
         int y1=-1;
         int x2=-1;
         int y2=-1;
-        g2d.drawLine(x[40], y[40]+15,x[calculate.city.get(0)], y[calculate.city.get(0)]+15); // kocaelinden ilk çizgi
+        g2d.drawLine(x[40], y[40]+15,x[calculate.city.get(0)], y[calculate.city.get(0)]+15); // kocaelinden ilk Ã§izgi
          
         for(int i=0; i<calculate.city.size()-1; i++) {
         		int ilk=calculate.city.get(i);
